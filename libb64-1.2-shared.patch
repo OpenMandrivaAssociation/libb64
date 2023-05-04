@@ -1,0 +1,29 @@
+--- a/src/Makefile
++++ b/src/Makefile
+@@ -1,4 +1,4 @@
+-LIBRARIES = libb64.a
++LIBRARIES = libb64
+ 
+ # Build flags (uncomment one)
+ #############################
+@@ -13,7 +13,7 @@ SOURCES = cdecode.c  cencode.c
+ 
+ TARGETS = $(LIBRARIES)
+ 
+-LINK.o = gcc
++LINK.o = $(CC)
+ 
+ CFLAGS += -Werror -pedantic
+ CFLAGS += -I../include
+@@ -24,6 +24,11 @@ vpath %.h ../include/b64
+ 
+ all: $(TARGETS) #strip
+ 
++libb64: libb64.a libb64.so
++
++libb64.so: cencode.o cdecode.o
++	$(CC) $(LDFLAGS) -o $@ $^
++
+ libb64.a: cencode.o cdecode.o
+ 	$(AR) $(ARFLAGS) $@ $^
+ 
