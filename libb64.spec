@@ -5,7 +5,7 @@
 Summary:	A fast encoding/decoding data into and from a base64-encoded format
 Name:		libb64
 Version:	1.2
-Release:	1
+Release:	2
 License:	Public Domain
 URL:		http://libb64.sourceforge.net/
 Source0:	https://downloads.sourceforge.net/%{name}/%{name}-%{version}.src.zip
@@ -59,6 +59,7 @@ code for standalone encoding and decoding executables.
 Summary:	A fast encoding/decoding data into and from a base64-encoded format
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
+Provides:	%{name}-devel
 
 %description -n %{devname}
 Headers and development files for %{name}.
