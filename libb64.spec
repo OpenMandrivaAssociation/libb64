@@ -7,7 +7,7 @@ Name:		libb64
 Version:	1.2.1
 Release:	1
 License:	Public Domain
-URL:		http://libb64.sourceforge.net/
+URL:		https://libb64.sourceforge.net/
 Source0:	https://downloads.sourceforge.net/%{name}/%{name}-%{version}.zip
 # (debian)
 Patch0:		bufsiz-as-buffer-size.diff
